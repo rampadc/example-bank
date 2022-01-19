@@ -2,7 +2,7 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
-  name: bank-knative-service-app-latest
+  name: bank-knative-service-app-latest-vault
   namespace: bank-infra
 spec:
   pathname: https://github.com/rampadc/example-bank.git

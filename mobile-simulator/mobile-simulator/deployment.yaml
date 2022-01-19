@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mobile-simulator-deployment
+  name: mobile-simulator-deployment-vault
   labels:
     app: mobile-simulator
 spec:
@@ -18,12 +18,12 @@ spec:
       containers:
         - image: quay.io/wdovey/mobile-simulator:css-fix
           imagePullPolicy: Always
-          name: mobile-simulator
+          name: mobile-simulator-vault
           envFrom:
             - secretRef:
-                name: mobile-simulator-secrets
+                name: mobile-simulator-secrets-vault
           env:
-            - name: PORT
+            - name: PORT-vault
               value: '8080'
           ports:
             - containerPort: 8080

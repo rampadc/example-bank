@@ -8,11 +8,11 @@ metadata:
     apps.open-cluster-management.io/reconcile-option: merge
   labels:
     app: mobile-simulator
-  name: mobile-simulator-subscription-1
+  name: mobile-simulator-subscription-1-vault
   namespace: bank-infra
 spec:
   channel: bank-infra/mobile-simulator-app-latest
   placement:
     placementRef:
       kind: PlacementRule
-      name: mobile-simulator-placement-1
+      name: mobile-simulator-placement-1-vault

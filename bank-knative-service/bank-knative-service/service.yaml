@@ -1,7 +1,7 @@
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-  name: process-transaction
+  name: process-transaction-vault
   # local to cluster only
   labels:
     serving.knative.dev/visibility: cluster-local
@@ -20,9 +20,9 @@ spec:
         - image: quay.io/wdovey/knative-transaction-process:with-auth
           envFrom:
             - secretRef:
-                name: bank-oidc-adminuser
+                name: bank-oidc-adminuser-vault
             - secretRef:
-                name: mobile-simulator-secrets
+                name: mobile-simulator-secrets-vault
           env:
-            - name: TRANSACTION_SERVICE_URL
+            - name: TRANSACTION_SERVICE_URL-vault
               value: "http://transaction-service:9080/bank/v1/transactions"

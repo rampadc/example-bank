@@ -1,13 +1,13 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: mobile-simulator-service
+  name: mobile-simulator-service-vault
   namespace: bank-infra
 spec:
   port:
     targetPort: 8080
   to:
     kind: Service
-    name: mobile-simulator-service
+    name: mobile-simulator-service-vault
     weight: 100
   wildcardPolicy: None

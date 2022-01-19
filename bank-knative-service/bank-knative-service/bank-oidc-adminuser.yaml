@@ -4,7 +4,7 @@ metadata:
   annotations:
     sealedsecrets.bitnami.com/cluster-wide: "true"
   creationTimestamp: null
-  name: bank-oidc-adminuser
+  name: bank-oidc-adminuser-vault
   namespace: bank-infra
 spec:
   encryptedData:
@@ -16,22 +16,22 @@ spec:
       annotations:
         sealedsecrets.bitnami.com/cluster-wide: "true"
       creationTimestamp: null
-      name: bank-oidc-adminuser
+      name: bank-oidc-adminuser-vault
       namespace: bank-infra
     type: Opaque
 ---
 apiVersion: external-secrets.io/v1alpha1
 kind: ExternalSecret
 metadata:
-  name: bank-oidc-adminuser
+  name: bank-oidc-adminuser-vault
   namespace: bank-infra
 spec:
   refreshInterval: "15s"
   secretStoreRef:
-    name: secretstore-vault
+    name: secretstore-vault-vault
     kind: ClusterSecretStore
   target:
-    name: bank-oidc-adminuser
+    name: bank-oidc-adminuser-vault
   data:
   - secretKey: APP_ID_ADMIN_PASSWORD
     remoteRef:

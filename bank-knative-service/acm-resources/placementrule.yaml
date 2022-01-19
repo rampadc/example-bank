@@ -4,7 +4,7 @@ kind: PlacementRule
 metadata:
   labels:
     app: bank-knative-service
-  name: bank-knative-service-placement-1
+  name: bank-knative-service-placement-1-vault
   namespace: bank-infra
 spec:
   clusterSelector:

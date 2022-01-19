@@ -8,11 +8,11 @@ metadata:
     apps.open-cluster-management.io/reconcile-option: merge
   labels:
     app: user-service
-  name: user-service-subscription-1
+  name: user-service-subscription-1-vault
   namespace: bank-infra
 spec:
   channel: bank-infra/user-service-app-latest
   placement:
     placementRef:
       kind: PlacementRule
-      name: user-service-placement-1
+      name: user-service-placement-1-vault

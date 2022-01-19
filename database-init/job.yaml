@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: cc-schema-load
+  name: cc-schema-load-vault
   labels:
     app: cc-schema-load
 spec:
@@ -9,9 +9,9 @@ spec:
     spec:
       restartPolicy: Never
       containers:
-        - name: cc-schema-load
+        - name: cc-schema-load-vault
           image: quay.io/wdovey/bank-schema:1.0
           imagePullPolicy: Always
           envFrom:
             - secretRef:
-                name: bank-db-secret
+                name: bank-db-secret-vault

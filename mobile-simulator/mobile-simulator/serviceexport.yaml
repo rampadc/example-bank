@@ -1,5 +1,5 @@
 apiVersion: multicluster.x-k8s.io/v1alpha1
 kind: ServiceExport
 metadata:
-  name: mobile-simulator
+  name: mobile-simulator-vault
   namespace: bank-infra	
